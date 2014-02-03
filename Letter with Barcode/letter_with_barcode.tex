@@ -1,0 +1,53 @@
+\documentclass{letter}
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=3cm,twoside=true]{geometry}
+\usepackage{hyperref}
+\usepackage{pstricks}
+\usepackage{pst-barcode}
+\usepackage{color}
+
+\signature{Joe Bloggs}
+%Sender's address and Barcode. Add or remove digits to the barcode to fit the width of the address
+\address{21 Bridge Street \\ Smallville \\ Dunwich DU3 4WE \\ \\ \psbarcode{12345}{}{royalmail} }
+
+%Move the closing and signature parts to the left
+\longindentation=0pt
+%Remove page numbers
+\pagenumbering{gobble}
+
+\begin{document}
+%Delivery address
+\begin{letter}{Director \\ Doe \& Co \\ 35 Anthony Road
+\\ Newport \\ Ipswich IP3 5RT}
+\opening{Dear Sir or Madam:}
+%Dummy text
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie pretium metus, sed auctor erat ornare eu. Quisque consectetur tempor feugiat. Aliquam erat volutpat. Sed luctus mollis turpis vel convallis. Integer id sapien sed arcu commodo feugiat. Integer at ligula iaculis, iaculis risus suscipit, fermentum dui. Sed rhoncus libero id enim accumsan, ac scelerisque elit semper. Donec non mi magna. Donec ac sapien lorem. In sed turpis at lorem fringilla faucibus sit amet scelerisque lacus. 
+
+ Nulla venenatis lacus dapibus, tincidunt nunc ac, gravida nunc. Suspendisse vulputate est vel eros vehicula, eget placerat sem accumsan. Aenean vestibulum, purus eu sollicitudin suscipit, turpis felis pellentesque lacus, a luctus odio massa at quam. Vivamus condimentum leo dolor, ut fermentum nisl mattis vel. Phasellus pellentesque aliquet nulla dignissim molestie. Mauris faucibus elit a tellus dapibus tristique. Maecenas hendrerit, justo eget viverra tincidunt, nisi ante vehicula odio, at euismod odio ligula interdum leo. Vestibulum purus odio, rutrum tempus dui sit amet, hendrerit venenatis elit. Vivamus sapien velit, cursus vel nulla vitae, dignissim accumsan turpis. Aliquam mollis lacinia pretium. Vestibulum ligula turpis, molestie in nisl in, venenatis iaculis risus. Suspendisse potenti. Ut volutpat commodo felis. 
+
+ In congue posuere malesuada. Etiam accumsan, tellus nec faucibus vestibulum, lacus odio porta libero, nec tincidunt nibh nisl id tortor. Ut ornare, felis eu tempus faucibus, diam erat interdum urna, ut posuere nunc ipsum non tellus. Phasellus justo est, vulputate vel faucibus nec, fringilla eu metus. Pellentesque auctor hendrerit quam rhoncus vulputate. Nunc elit metus, tristique nec molestie sit amet, ultricies vel arcu. Suspendisse ullamcorper ligula nibh, eget sagittis velit posuere congue. Pellentesque quam orci, adipiscing non malesuada et, semper sit amet odio. Vivamus placerat ante a ipsum sagittis, vel cursus urna semper. Maecenas auctor ullamcorper ullamcorper. Morbi consequat dui mi, sit amet tincidunt sem varius vitae. Quisque quis ante egestas, posuere est ac, laoreet mi. Nunc euismod nulla vitae dictum ullamcorper. Nulla sed eros laoreet, elementum risus sed, consectetur dolor. Donec neque metus, congue eu sollicitudin quis, semper sit amet justo. Vestibulum viverra turpis sit amet nulla placerat convallis. 
+
+ Pellentesque tortor libero, lobortis eget dictum sed, blandit vitae dui. Mauris tincidunt mauris et nulla molestie, id consectetur augue porttitor. Quisque luctus gravida porttitor. In ante neque, sagittis a elementum ac, pellentesque vel tortor. Nunc ipsum eros, tristique vitae felis quis, rhoncus commodo tortor. Ut ut bibendum tortor, sit amet dictum orci. Pellentesque consequat lorem dapibus condimentum ultricies. Integer pellentesque suscipit turpis, in dictum eros sagittis a. 
+
+ Proin quis vulputate justo. Maecenas lobortis velit a nisl varius, quis fringilla justo porta. Suspendisse ut ante vel urna imperdiet varius sit amet non ante. Praesent purus risus, malesuada in risus convallis, vehicula viverra dui. Nulla eu erat nec tellus aliquet fringilla. Donec pharetra orci lacus. Pellentesque ut augue in diam porttitor egestas. 
+
+ Vivamus scelerisque euismod justo, non lobortis risus gravida in. Phasellus in viverra velit. Aenean pretium facilisis purus, nec porta metus tempus vitae. Sed fermentum justo ut bibendum semper. Curabitur venenatis, velit ac consequat lacinia, lacus turpis sodales mi, ac volutpat mi dui non urna. Vestibulum consectetur purus at lacus pulvinar dictum. Maecenas dui ipsum, malesuada placerat consectetur vel, congue quis urna. Duis imperdiet eu augue nec tempus. Pellentesque ultrices pulvinar tellus id feugiat. Praesent dignissim nunc eget tellus tempus, non fermentum ipsum pulvinar. 
+
+ Curabitur sit amet tristique ligula, a adipiscing massa. Integer sit amet justo placerat libero congue viverra. Quisque ut hendrerit erat. Morbi at purus sit amet mi eleifend dictum nec at magna. Donec facilisis, lacus quis fermentum molestie, quam elit laoreet odio, et auctor leo ipsum sed augue. Nullam volutpat neque a porttitor consectetur. Ut iaculis sapien et lorem consectetur venenatis.
+ 
+Thank you for your time and consideration.
+ 
+I look forward to your reply.
+
+
+ 
+\closing{Yours Faithfully,}
+
+%Postscript and attachments 
+\ps{P.S. You can find the full text of GFDL license at
+\url{http://www.gnu.org/copyleft/fdl.html}.\\}
+%Remove the line bellow and replace it with just \encl{Copyright permission form} if you don't want the gray color
+{\color{gray}\encl{Copyright permission form}}
+ 
+\end{letter}
+ 
+\end{document}
