@@ -1,0 +1,117 @@
+\documentclass{beamer}
+
+%Hint: You can define color by using blue, red or blackandwhite like the line bellow
+%\documentclass[blue]{beamer}
+%You can also change the aspect ratio:
+%\documentclass[aspectratio=169]{beamer}
+
+%Theme selection. See here for a full list of themes: http://deic.uab.es/~iblanes/beamer_gallery/
+\usetheme{Warsaw}
+%use necessary packages
+\usepackage{array}
+\usepackage{graphicx}
+
+%presentation details
+\title[Short Title]{Full Presentation Title}
+\subtitle{Subtitle}
+\author{John Smith}
+\institute[webpage]{Institute \\ Department}
+\date{January 21, 1991}
+\begin{document}
+
+%title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+%table of contents
+\begin{frame}
+\frametitle{Table of Contents}
+%use this line instead of the one bellow to highlight the current section in the table of contents
+%\tableofcontents[currentsection]
+\tableofcontents
+\end{frame}
+
+%section
+\section{Introduction}
+
+%quote
+\begin{frame}
+ \frametitle{Fault Tolerance}
+\noindent
+ \textit{``A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable.''}
+ \\Leslie Lamport
+\end{frame}
+
+%item list
+\begin{frame}
+ \frametitle{Failure models}
+\begin{itemize}
+ \item Crash failures
+ \item Omission failures
+ \item Timing failures
+ \item Response failures
+ \item Byzantine (arbitrary) failures
+\end{itemize}
+\end{frame}
+
+%numbered list
+\section{Algorithms}
+\begin{frame}
+ \frametitle{Algorithms}
+\begin{enumerate}
+ \item Practical Byzantine Fault Tolerance
+ \item Query/Update (Q/U)
+ \item BFT2F
+ \item Zyzzyva
+ \item CheapBFT
+\end{enumerate}
+\end{frame}
+
+%numbered list - show items step by step
+%important! don't forget to add the "handout" option to the documentclass if you are going to print the slides!
+\begin{frame}
+ \frametitle{Algorithms - Step by step}
+\begin{enumerate}
+ \item<1-> Practical Byzantine Fault Tolerance
+ \item<2-> Query/Update (Q/U)
+ \item<3-> BFT2F
+ \item<3-> Zyzzyva
+ \item<4-> CheapBFT
+\end{enumerate}
+\end{frame}
+
+%figure
+\begin{frame}
+ \frametitle{State diagram}
+\begin{figure}
+\begin{center}
+\includegraphics[width=3.5in]{Images/state-diagram}\\
+\end{center}
+\end{figure}
+\end{frame}
+
+%framed text
+\begin{frame}
+\frametitle{Framed text}
+\begin{block}{Block}
+Block text
+\end{block}
+\begin{example}{Example}
+text
+\end{example}
+\begin{alertblock}{Alert block}
+Alert block text
+\end{alertblock}
+\end{frame}
+
+\section{Conclusion}
+
+%end frame
+\begin{frame}
+ \frametitle{End of Presentation}
+Questions?
+\end{frame}
+
+
+\end{document}

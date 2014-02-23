@@ -1,0 +1,76 @@
+\documentclass[a4paper,11pt]{scrbook}
+\usepackage[utf8]{inputenc}
+
+%Page margins
+\usepackage[left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+
+\usepackage{graphicx}
+%Insert clickable links to Table of Contents, Figures and References.
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+%Book title
+\title{\textbf{KOMA Script LaTeX Book Template}}
+%Author name
+\author{John Smith}
+%Date
+\date{January 21, 1991}
+
+%Remove page numbers for the first pages
+\pagenumbering{gobble}
+
+%==================================================
+%Title Page
+%==================================================
+\maketitle
+
+%--------------------------------------------------
+%Including content. Add yours or comment those not
+%needed. All files can be found in the ``Content''
+%folder. Images for figures should be placed in the
+%``Images'' folder.
+%--------------------------------------------------
+
+%==================================================
+%Preface -- Not enumerated chapter
+%==================================================
+\include{Content/Preface}
+
+%==================================================
+%Abstract -- Not enumerated chapter
+%==================================================
+\include{Content/Abstract}
+
+%==================================================
+%Table of contents
+%==================================================
+\tableofcontents
+
+%Roman page numbering for table of contents
+\pagenumbering{roman}
+
+%==================================================
+%First enumerated chapter
+%==================================================
+\include{Content/Chapter1}
+
+%==================================================
+%Second enumerated chapter
+%==================================================
+\include{Content/Chapter2}
+
+%==================================================
+%Third enumerated chapter
+%==================================================
+\include{Content/Chapter3}
+
+%==================================================
+%Bibliography
+%==================================================
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+
+\end{document}

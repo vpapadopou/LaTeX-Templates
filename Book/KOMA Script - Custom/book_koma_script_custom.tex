@@ -1,0 +1,119 @@
+\documentclass[a4paper,11pt]{scrbook}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+%Insert clickable links to Table of Contents, Figures and References.
+\usepackage[hidelinks]{hyperref}
+
+\ifundefinedorrelax{chapterformat}{}{% den Kapitel-Teil nicht bei scrartcl anwenden
+  \renewcommand*{\chapterformat}{%
+    \raisebox{\dimexpr\ht\strutbox-\totalheight\relax}[\ht\strutbox][\dp\strutbox]{\llap{%
+      % Following line is the original definition
+      \scalebox{3}{\Huge\thechapter\autodot}\hskip\marginparsep}%
+    }}%
+  \renewcommand*{\chapterheadendvskip}{}%
+}
+
+%Page margins
+\usepackage[left=3.2cm, right=3.2cm, top=3cm, bottom=3cm]{geometry}
+
+%Use package FancyHDR
+\usepackage{fancyhdr}
+
+%Define custom Header and Footer
+%==================================================
+\fancyhead{}
+\fancyfoot{}
+
+%Left -- Even pages -> Chapter Title
+\fancyhead[LE]{\sffamily \bfseries \slshape \leftmark}
+%Right -- Odd pages -> Section Title
+\fancyhead[RO]{\sffamily \bfseries \slshape \rightmark}
+%Right -- Odd pages & Left -- Even pages -> Page number
+\fancyfoot[RO, LE] {\sffamily \bfseries \thepage}
+%Horizontal lines -- Header & Footer
+\renewcommand{\headrulewidth}{0.4pt}
+%Uncomment this line if you want a horizontal line in the footer
+\renewcommand{\footrulewidth}{0.4pt}
+%==================================================
+
+\begin{document}
+
+%Book title
+\title{\textbf{KOMA Script - Custom LaTeX Book Template}}
+%Author name
+\author{John Smith}
+%Date
+\date{January 21, 1991}
+
+%Remove page numbers for the first pages
+\pagenumbering{gobble}
+
+%==================================================
+%Title Page
+%==================================================
+\maketitle
+
+%--------------------------------------------------
+%Including content. Add yours or comment those not
+%needed. All files can be found in the ``Content''
+%folder. Images for figures should be placed in the
+%``Images'' folder.
+%--------------------------------------------------
+
+%==================================================
+%Preface -- Not enumerated chapter
+%==================================================
+\include{Content/Preface}
+
+%==================================================
+%Abstract -- Not enumerated chapter
+%==================================================
+\include{Content/Abstract}
+
+%==================================================
+%Table of contents
+%==================================================
+\tableofcontents
+
+%Roman page numbering for table of contents
+\pagenumbering{roman}
+
+%==================================================
+%First enumerated chapter
+%==================================================
+
+%--------------------------------------------------
+%Technical Details
+%--------------------------------------------------
+%Use FancyHDR page style
+\pagestyle{fancy}
+%Change header style
+\renewcommand*{\chaptermark}[1]{\markboth{\thechapter.~~#1}{}}
+\renewcommand*{\sectionmark}[1]{\markright{\thesection.~~#1}}
+%--------------------------------------------------
+
+\include{Content/Chapter1}
+
+%==================================================
+%Second enumerated chapter
+%==================================================
+\include{Content/Chapter2}
+
+%==================================================
+%Third enumerated chapter
+%==================================================
+\include{Content/Chapter3}
+
+%==================================================
+%Bibliography
+%==================================================
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+%Remove page numbers from Bibliography
+\pagenumbering{gobble}
+
+
+\end{document}
